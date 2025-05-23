@@ -130,7 +130,7 @@ commonBackendEnvs are for api and worker containers
 
 {{- if .Values.pluginDaemon.enabled }}
 - name: PLUGIN_DAEMON_URL
-  value: "http://{{ include "dify.fullname" . }}-plugin-daemon:{{ .Values.pluginDaemon.service.port }}"
+  value: "https://{{ include "dify.fullname" . }}-plugin-daemon:{{ .Values.pluginDaemon.service.port }}"
 - name: MARKETPLACE_API_URL
   value: 'https://marketplace.dify.ai'
 - name: PLUGIN_DAEMON_KEY
